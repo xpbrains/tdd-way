@@ -8,7 +8,7 @@ namespace FizzBuzz
     {
         public string Resove(int value)
         {
-            throw new NotImplementedException();
+            return value % 3 == 0 ? "Fizz" : value.ToString();
         }
     }
 }
