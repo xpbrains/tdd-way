@@ -48,7 +48,6 @@ namespace FizzBuzz.UnitTests
 
         [TestCase(5)]
         [TestCase(10)]
-        [TestCase(15)]
         [TestCase(20)]
         [TestCase(25)]
         public void ShouldProduceBuzzWhenMultiplesOfFive(int value)
@@ -65,6 +64,25 @@ namespace FizzBuzz.UnitTests
             Assert.That<string>(actual, Is.EqualTo(expected));
         }
 
+        [TestCase(3)]
+        [TestCase(5)]
+        [TestCase(6)]
+        [TestCase(9)]
+        [TestCase(10)]
+        [TestCase(15)]
+        public void ShouldProduceFizzBuzzWhenMultiplesOfThreeOfFive(int value)
+        {
+            // Arrange
+            string expected = "FizzBuzz";
+
+            var fb = new FizzBuzzResolver();
+
+            // Act
+            var actual = fb.Resove(value);
+
+            //Assert
+            Assert.That<string>(actual, Is.EqualTo(expected));
+        }
 
 
     }
