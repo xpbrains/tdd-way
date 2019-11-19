@@ -78,7 +78,5 @@ namespace FizzBuzz.UnitTests
             //Assert
             Assert.That<string>(actual, Is.EqualTo(expected));
         }
-
-
     }
 }

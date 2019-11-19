@@ -8,7 +8,7 @@ namespace FizzBuzz
         {
             Console.WriteLine("FizzBuzz replacer");
             var game = new FizzBuzzGame();
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 100; i++)
             {
                 Console.Write($@"{game.Run(i)}  ");
             }

@@ -4,14 +4,13 @@ using System.Text;
 
 namespace FizzBuzz
 {
-    class OddEvenGame : NiceGame
+    class TicTacGame : NiceGame
     {
-        public OddEvenGame() : base(CreateRules())
+        public TicTacGame()
         {
-            Console.WriteLine($"Game  {nameof(OddEvenGame)} started.");
+            Console.WriteLine($"Game  {nameof(TicTacGame)} started.");
         }
-
-        private static GameRules CreateRules()
+        protected override GameRules SetupRules()
         {
             return new GameRules
             {
@@ -20,14 +19,15 @@ namespace FizzBuzz
             };
         }
 
-        private static bool EachEven(int number)
+        private bool EachEven(int number)
         {
             return number % 2 == 0;
         }
 
-        private static bool EachOdd(int number)
+        private bool EachOdd(int number)
         {
             return !EachEven(number);
         }
+
     }
 }

@@ -5,15 +5,17 @@ namespace FizzBuzz
 {
     public abstract class NiceGame
     {
-        private readonly GameRules rules;
-        public NiceGame(GameRules rules)
-        {
-            this.rules = rules;
-        }
-
         public string Run(int value)
         {
-            return rules.Check(value);
+            GameRules rules = SetupRules();
+            if (rules == null)
+            {
+                throw new GameRulesNotFoundException($"The {this.GetType().Name} game assumes at least one rule to be defined.");
+            }
+
+            return rules?.Check(value);
         }
+
+        protected abstract GameRules SetupRules();
     }
 }
