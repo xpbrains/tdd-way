@@ -1,28 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text;
 
 namespace FizzBuzz
 {
-    public class FizzBuzzResolver
+    public class FizzBuzzGame
     {
-        public string Resove(int value)
+        private Resolvers context;
+        public FizzBuzzGame()
         {
-            var m3 = value % 3 == 0;
-            var m5 = value % 5 == 0;
-            if (m3 && m5)
+            context = new Resolvers
             {
-                return "FizzBuzz";
-            }
-            if (m3)
-            {
-                return "Fizz";
-            }
-            if (m5)
-            {
-                return "Buzz";
-            }
-            return value.ToString();
+                { x=> MultiplesOfThree(x) && MultiplesOfFive(x), "FizzBuzz" },
+                { x=> MultiplesOfThree(x), "Fizz" },
+                { x=> MultiplesOfFive(x), "Buzz" }
+            };
+        }
+
+        private bool MultiplesOfThree(int value) => value % 3 == 0;
+        private bool MultiplesOfFive(int value) => value % 5 == 0;
+
+        public string Run(int value)
+        {
+            return context.Resove(value);
         }
     }
 }

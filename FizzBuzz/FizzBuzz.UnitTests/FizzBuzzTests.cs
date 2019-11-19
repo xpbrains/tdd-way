@@ -16,10 +16,10 @@ namespace FizzBuzz.UnitTests
             // Arrange
             string expected =$@"{value}";
 
-            var fb = new FizzBuzzResolver();
+            var fb = new FizzBuzzGame();
 
             // Act
-            var actual = fb.Resove(value);
+            var actual = fb.Run(value);
 
             //Assert
             Assert.That<string>(actual, Is.EqualTo(expected));
@@ -36,10 +36,10 @@ namespace FizzBuzz.UnitTests
             // Arrange
             string expected = "Fizz";
 
-            var fb = new FizzBuzzResolver();
+            var fb = new FizzBuzzGame();
 
             // Act
-            var actual = fb.Resove(value);
+            var actual = fb.Run(value);
 
             //Assert
             Assert.That<string>(actual,Is.EqualTo(expected));
@@ -54,10 +54,10 @@ namespace FizzBuzz.UnitTests
             // Arrange
             string expected = "Buzz";
 
-            var fb = new FizzBuzzResolver();
+            var fb = new FizzBuzzGame();
 
             // Act
-            var actual = fb.Resove(value);
+            var actual = fb.Run(value);
 
             //Assert
             Assert.That<string>(actual, Is.EqualTo(expected));
@@ -70,10 +70,10 @@ namespace FizzBuzz.UnitTests
             // Arrange
             string expected = "FizzBuzz";
 
-            var fb = new FizzBuzzResolver();
+            var fb = new FizzBuzzGame();
 
             // Act
-            var actual = fb.Resove(value);
+            var actual = fb.Run(value);
 
             //Assert
             Assert.That<string>(actual, Is.EqualTo(expected));
