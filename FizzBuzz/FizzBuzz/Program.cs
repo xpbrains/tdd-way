@@ -7,11 +7,12 @@ namespace FizzBuzz
         static void Main(string[] args)
         {
             Console.WriteLine("FizzBuzz replacer");
-            var fb = new FizzBuzzGame();
-            for (int i = 1; i <= 100; i++)
+            var game = new FizzBuzzGame();
+            for (int i = 1; i <= 10; i++)
             {
-                Console.Write($@"{fb.Run(i)}  ");
+                Console.Write($@"{game.Run(i)}  ");
             }
+            Console.WriteLine();
             Console.WriteLine("Press Enter to exit...");
             Console.ReadLine();
         }

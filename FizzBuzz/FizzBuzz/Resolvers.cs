@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace FizzBuzz
 {
-    public class Resolvers : IEnumerable
+    public class GameRules : IEnumerable
     {
         private IDictionary<Func<int, bool>, string> rules = new Dictionary<Func<int, bool>, string> ();
 
@@ -18,7 +18,7 @@ namespace FizzBuzz
             rules.Add(func, value);
         }
 
-        public string Resove(int value)
+        public string Check(int value)
         {
 
             foreach (var check in rules)
