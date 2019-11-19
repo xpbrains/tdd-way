@@ -47,6 +47,25 @@ namespace FizzBuzz.UnitTests
             Assert.That<string>(actual,Is.EqualTo(expected));
         }
 
+        [TestCase(5)]
+        [TestCase(10)]
+        [TestCase(15)]
+        [TestCase(20)]
+        [TestCase(25)]
+        public void ShouldProduceBuzzWhenMultiplesOfFive(int value)
+        {
+            // Arrange
+            string expected = "Buzz";
+
+            var fb = new FizzBuzzResolver();
+
+            // Act
+            var actual = fb.Resove(value);
+
+            //Assert
+            Assert.That<string>(actual, Is.EqualTo(expected));
+        }
+
 
 
     }
