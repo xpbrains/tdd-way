@@ -10,7 +10,6 @@ namespace FizzBuzz.UnitTests
         [TestCase(1)]
         [TestCase(2)]
         [TestCase(4)]
-        [TestCase(5)]
         [TestCase(7)]
         public void ShouldProduceInputValueWhenNotMultiplesOfThree(int value)
         {
