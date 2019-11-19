@@ -8,12 +8,17 @@ namespace FizzBuzz
     {
         public string Resove(int value)
         {
-
-            if (value % 3 == 0)
+            var m3 = value % 3 == 0;
+            var m5 = value % 5 == 0;
+            if (m3 && m5)
+            {
+                return "FizzBuzz";
+            }
+            if (m3)
             {
                 return "Fizz";
             }
-            if (value % 5 == 0)
+            if (m5)
             {
                 return "Buzz";
             }
